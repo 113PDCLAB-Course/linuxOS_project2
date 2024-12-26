@@ -25,4 +25,10 @@
 * linux 6.8.0 有一個叫做 `TASK_NORMAL` 的 flag，其使用 `TASK_INTERRUPTIBLE` 與 `TASK_UNINTERRUPTIBLE` 組成，因此它可以去呼叫 wait_queue 中的 wait_queue_entry 的 `TASK_INTERRUPTIBLE` 與 `TASK_UNINTERRUPTIBLE`。其主要用因是幫助 `wake_up` function 可以都去嘗試把他們叫起來。
 * `<function name>` 通常會去 call `__<function name>` 來做 lock 或是一些前處理 or 參數確認。
 
-
+## 參考連結
+* [Linux wait queue - Combination of exclusive and non-exclusive by stackoverflow ](https://stackoverflow.com/questions/39893500/linux-wait-queue-combination-of-exclusive-and-non-exclusive)
+* [内核基础设施——wait queue](https://linux.laoqinren.net/kernel/wait-queue/)
+* [Compiling kernel gives error No rule to make target 'debian/certs/debian-uefi-certs.pem' by stackoverflow](https://stackoverflow.com/questions/67670169/compiling-kernel-gives-error-no-rule-to-make-target-debian-certs-debian-uefi-ce)
+* [bad shim signature- you need to load the kernel first by bad shim signature](https://forums.linuxmint.com/viewtopic.php?t=393337)
+* [Linux内核同步机制之（四）：spin lock](http://www.wowotech.net/kernel_synchronization/spinlock.html)
+* [Linux waitqueue 原始碼解讀](https://davidleitw.github.io/posts/linux_wake_queue1/)
