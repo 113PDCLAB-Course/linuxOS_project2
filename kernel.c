@@ -11,7 +11,6 @@
 
 DECLARE_WAIT_QUEUE_HEAD(wq_head);
 DEFINE_SPINLOCK(wq_lock);
-DEFINE_SPINLOCK(wq2_lock);
 static int enter_wait_queue(void)
 {
     DEFINE_WAIT(wq_entry);
@@ -19,10 +18,10 @@ static int enter_wait_queue(void)
 
     schedule();
 
-    spin_lock(&wq2_lock);
+    spin_lock(&wq_lock);
     __set_current_state(TASK_RUNNING);
     remove_wait_queue(&wq_head, &wq_entry);
-    spin_unlock(&wq2_lock);
+    spin_unlock(&wq_lock);
 
     return 0;
 }
