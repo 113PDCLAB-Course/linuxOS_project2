@@ -1,7 +1,8 @@
 # LinuxOS Project2 
 > [題目要求](./Project_2.pdf)
 > 滿足 test.c(user space) 的要求，且使用 FIFO 方式輸出
-
+> ![FIFO of waitqueue的 code](./kernel.c)
+> ![random of waitqueue 的 code](./kernel-random.c)
 ## 執行結果
 ![](./image.png) 
 
