@@ -1,10 +1,13 @@
 # LinuxOS Project2 
 > [題目要求](./Project_2.pdf)
 > 滿足 test.c(user space) 的要求，且使用 FIFO 方式輸出
+> 
 > [FIFO of waitqueue的 code](./kernel.c)
+> 
 > [random of waitqueue 的 code](./kernel-random.c)
 ## 執行結果
 ![](./fifo.png) 
+
 [random 結果](./random.png)
 ## syscall 說明
 * 使用 `DECLARE_WAIT_QUEUE_HEAD(wq_head);` linux 提供的方法來建立 wait queue head struct
